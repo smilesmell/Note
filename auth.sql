@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2020-08-12 12:25:14
+Date: 2020-08-15 17:14:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,6 +32,27 @@ CREATE TABLE `failed_jobs` (
 -- ----------------------------
 -- Records of failed_jobs
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for `message`
+-- ----------------------------
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE `message` (
+  `user_id` int(255) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 DEFAULT '',
+  `type` varchar(255) CHARACTER SET utf8 DEFAULT '',
+  `department` varchar(255) CHARACTER SET utf8 DEFAULT '',
+  `date` date DEFAULT NULL,
+  `reason` varchar(255) CHARACTER SET utf8 DEFAULT '',
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of message
+-- ----------------------------
+INSERT INTO `message` VALUES ('1', '123', '123', '123', '2001-01-20', '11');
+INSERT INTO `message` VALUES ('2', 'echo', '', '程序部', null, '无');
+INSERT INTO `message` VALUES ('3', 'echo', '', '程序部', null, '无');
 
 -- ----------------------------
 -- Table structure for `migrations`
@@ -79,6 +100,13 @@ CREATE TABLE `oauth_access_tokens` (
 -- ----------------------------
 INSERT INTO `oauth_access_tokens` VALUES ('563b21b095e81e495b9b9e686a91c6e77dd1ac7c143c76bd3d5f91ff8851c0cb15e51d59bfc139ac', '2', '1', 'MyApp', '[]', '0', '2020-08-11 11:57:59', '2020-08-11 11:57:59', '2021-08-11 11:57:59');
 INSERT INTO `oauth_access_tokens` VALUES ('c39a112ba6785890c48008977756db9b74ed5bb2c7986190f01b43fc878f481c10a51798a7a8af4d', '3', '1', 'MyApp', '[]', '0', '2020-08-11 12:25:31', '2020-08-11 12:25:31', '2021-08-11 12:25:31');
+INSERT INTO `oauth_access_tokens` VALUES ('81035a7c5f8feb43047ddf3b431fc96e8120158a7dbd91e72ea90613a094dc875da07b9b2087d3db', '4', '1', 'MyApp', '[]', '0', '2020-08-15 06:41:44', '2020-08-15 06:41:44', '2021-08-15 06:41:44');
+INSERT INTO `oauth_access_tokens` VALUES ('ad986643690726608ea11818f6e2b519830afa8d4d9d40e809813c29cd494e23922a6bcde52c7976', '4', '1', 'API', '[]', '0', '2020-08-15 06:42:52', '2020-08-15 06:42:52', '2021-08-15 06:42:52');
+INSERT INTO `oauth_access_tokens` VALUES ('6c790794bc127b5a0652b2231a879e8eb67ca88fc06000aeb17b675fde10220f8bee8d249e639887', '4', '1', 'API', '[]', '0', '2020-08-15 06:44:11', '2020-08-15 06:44:11', '2021-08-15 06:44:11');
+INSERT INTO `oauth_access_tokens` VALUES ('90fbe17c49330f3e2a01a941105cfcce63b7b0e0651e77a944f88001626f50bebd69af89ce256e46', '4', '1', 'API', '[]', '0', '2020-08-15 06:45:25', '2020-08-15 06:45:25', '2021-08-15 06:45:25');
+INSERT INTO `oauth_access_tokens` VALUES ('aa0034d636accc72051195785bbaeea2a98dbf7396d0f234711efe2f64438952ca681b2da7dbd29b', '4', '1', 'API', '[]', '0', '2020-08-15 06:46:51', '2020-08-15 06:46:51', '2021-08-15 06:46:51');
+INSERT INTO `oauth_access_tokens` VALUES ('9fcedfb61f76e1a56d81b595e544af76e02ef2895ab8b03d50d567945a926e1044cd4fc6b4af9050', '4', '1', 'API', '[]', '0', '2020-08-15 06:47:45', '2020-08-15 06:47:45', '2021-08-15 06:47:45');
+INSERT INTO `oauth_access_tokens` VALUES ('9384b66d782102a2408c399cea6193075fa6d1165a197c072c7198deaabda9ef3e8dfbc128efe8e8', '4', '1', 'API', '[]', '0', '2020-08-15 06:48:11', '2020-08-15 06:48:11', '2021-08-15 06:48:11');
 
 -- ----------------------------
 -- Table structure for `oauth_auth_codes`
@@ -180,19 +208,18 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(199) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(199) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(199) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `is_admin` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', 'Echo', 'Echo@echo.com', null, '$2y$10$AJtV0rSi8XinfY7D0xCrKOe3DHSmvmdgHf7yXnnsiQlA/g4YBF4py', null, '2020-08-11 11:52:54', '2020-08-11 11:52:54');
-INSERT INTO `users` VALUES ('2', 'hh', 'hh@echo.com', null, '$2y$10$q.fN1OMHwndh5p0Yygyu1O6ee2jjVJBI2dVXZYnznXfYHgggnfxZW', null, '2020-08-11 11:57:59', '2020-08-11 11:57:59');
-INSERT INTO `users` VALUES ('3', 'user', 'user@user.com', null, '$2y$10$ztx4DwmSWCFco/WY0FRGLemYlbWzhMfSiuKctrgxfKOP.jRT4pzDa', null, '2020-08-11 12:25:31', '2020-08-11 12:25:31');
+INSERT INTO `users` VALUES ('1', 'Echo', '$2y$10$AJtV0rSi8XinfY7D0xCrKOe3DHSmvmdgHf7yXnnsiQlA/g4YBF4py', null, '2020-08-11 11:52:54', '2020-08-11 11:52:54', '0');
+INSERT INTO `users` VALUES ('2', 'hh', '$2y$10$q.fN1OMHwndh5p0Yygyu1O6ee2jjVJBI2dVXZYnznXfYHgggnfxZW', null, '2020-08-11 11:57:59', '2020-08-11 11:57:59', '0');
+INSERT INTO `users` VALUES ('3', 'user', '$2y$10$ztx4DwmSWCFco/WY0FRGLemYlbWzhMfSiuKctrgxfKOP.jRT4pzDa', null, '2020-08-11 12:25:31', '2020-08-11 12:25:31', '0');
+INSERT INTO `users` VALUES ('4', '123', '$2y$10$L1PJTaeuVYInDWl5NTE3oOgvFQvirIKeZOMxWwSGrCWl2x0lZ.BFK', null, '2020-08-15 06:41:44', '2020-08-15 06:41:44', '1');
