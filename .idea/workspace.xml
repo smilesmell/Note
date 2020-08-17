@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5012d971-67c7-43af-b643-13137c2db201" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AuthTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AuthTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +192,7 @@
       <workItem from="1597490867013" duration="84000" />
       <workItem from="1597491059521" duration="110000" />
       <workItem from="1597498681006" duration="336000" />
-      <workItem from="1597651998894" duration="1974000" />
+      <workItem from="1597651998894" duration="2442000" />
     </task>
     <servers />
   </component>
