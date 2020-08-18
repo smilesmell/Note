@@ -9,5 +9,5 @@ class Message extends Model
     //
     protected $table = 'message';
     public $timestamps = false;
-    protected $fillable = ['name', 'department','time','reason'];
+    protected $fillable = ['name', 'department','type','date','reason'];
 }
