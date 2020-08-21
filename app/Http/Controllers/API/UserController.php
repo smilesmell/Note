@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Message;
 
@@ -41,8 +42,8 @@ class UserController extends Controller
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'password' => 'required',
+            'name' => 'required|unique:users',
+            'password' => 'required|min:6|max:16',
         ]);
 
 
@@ -64,7 +65,7 @@ class UserController extends Controller
      */
     public function details()
     {
-        $data=User::with('messages')->get();
+        $data=Message::with('user')->get();
 
         return response() -> json([
             'state' => 'success',
@@ -116,13 +117,33 @@ class UserController extends Controller
                 ]);
             }
         }
-        public function look($id)
+        public function look($name)
         {
-            $messages = User::find($id)->messages;
-            return response() -> json([
-                'state' => 'success',
-                'data' => $messages
-            ]);
+
+
+            $data = DB::table('message')
+                ->when($name, function ($query, $name) {
+                    return $query->where('name', $name);
+                })
+                ->get();
+//            var_dump(count($data));
+            if(count($data)==0)
+            {
+                return response() -> json([
+                    'message' => 'the data doesn\'t have'
+                ]);
+
+
+
+            }
+            else
+            {
+                return response() -> json([
+                    'state' => 'success',
+                    'data' => $data
+                ]);
+            }
+
 
         }
 

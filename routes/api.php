@@ -23,7 +23,7 @@ Route::post('register', 'API\UserController@register');
 Route::post('login', 'API\UserController@login');
 Route::get('accept/{auditStatus}', 'API\UserController@accept');
 Route::post('submit', 'API\UserController@submit');
-Route::post('look/{id}', 'API\UserController@look');
+Route::get('look/{name}', 'API\UserController@look');
 Route::post('details', 'API\UserController@details');
 //Route::group(['middleware' => 'auth:api'], function(){
 //

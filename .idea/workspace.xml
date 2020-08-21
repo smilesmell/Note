@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5012d971-67c7-43af-b643-13137c2db201" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_17_083400_create_message_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_17_083400_create_message_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +20,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="AuthTest" />
@@ -136,9 +154,9 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Not" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -153,6 +171,9 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="FirefoxRemoteDebugType" activateToolWindowBeforeRun="false">
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -199,7 +220,19 @@
       <workItem from="1597670188911" duration="39000" />
       <workItem from="1597670466712" duration="772000" />
       <workItem from="1597714022622" duration="267000" />
-      <workItem from="1597716211089" duration="797000" />
+      <workItem from="1597716211089" duration="980000" />
+      <workItem from="1597717239765" duration="23000" />
+      <workItem from="1597717723530" duration="5019000" />
+      <workItem from="1597823656214" duration="943000" />
+      <workItem from="1597908723447" duration="187000" />
+      <workItem from="1597908923961" duration="994000" />
+      <workItem from="1597909932156" duration="358000" />
+      <workItem from="1597910311853" duration="155000" />
+      <workItem from="1597910477885" duration="57000" />
+      <workItem from="1597910546849" duration="7720000" />
+      <workItem from="1597988167683" duration="40000" />
+      <workItem from="1597988568124" duration="752000" />
+      <workItem from="1597990746535" duration="4505000" />
     </task>
     <servers />
   </component>

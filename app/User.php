@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'password'
     ];
 
     /**
@@ -43,5 +43,21 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Message');
     }
+//    public function  find($name)
+//    {
+//
+//        $data = DB::table('users')->where('name', $name);
+//
+//
+//        /**            @foreach($users as $user)
+//         *
+//         *           @foreach($user->products as $product)  // fetch products
+//         *                  // do your magic
+//         *            @endforeach
+//         *
+//         *@endforeach
+//         */
+//        dump($data);
+//    }
 }
 
