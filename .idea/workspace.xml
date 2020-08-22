@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5012d971-67c7-43af-b643-13137c2db201" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5012d971-67c7-43af-b643-13137c2db201" name="默认的" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,6 +228,7 @@
       <workItem from="1597990746535" duration="5177000" />
       <workItem from="1598072146522" duration="2308000" />
       <workItem from="1598074569222" duration="28000" />
+      <workItem from="1598075185809" duration="70000" />
     </task>
     <servers />
   </component>
