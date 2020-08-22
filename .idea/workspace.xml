@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_17_083400_create_message_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_17_083400_create_message_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
@@ -232,7 +231,8 @@
       <workItem from="1597910546849" duration="7720000" />
       <workItem from="1597988167683" duration="40000" />
       <workItem from="1597988568124" duration="752000" />
-      <workItem from="1597990746535" duration="4505000" />
+      <workItem from="1597990746535" duration="5177000" />
+      <workItem from="1598072146522" duration="860000" />
     </task>
     <servers />
   </component>

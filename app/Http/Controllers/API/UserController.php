@@ -93,10 +93,15 @@ class UserController extends Controller
             'message'=>'success'
             ], 201);
     }
-        public function  accept($auditStatus)
+        public function  accept($id,$auditStatus)
         {
+
             if($auditStatus == 0)
             {
+                $affected = DB::table('message')
+                    ->where('id', $id)
+                    ->update(['auditStatus' => 0]);
+
                 return response()->json([
                     'auditStatus' => '0',
                     'message'=>'审批中'
@@ -104,6 +109,9 @@ class UserController extends Controller
             }
             if($auditStatus == 1)
             {
+                $affected = DB::table('message')
+                    ->where('id', $id)
+                    ->update(['auditStatus' => 1]);
                 return response()->json([
                     'auditStatus' => '1',
                     'message'=>'通过'
@@ -111,6 +119,9 @@ class UserController extends Controller
             }
             if($auditStatus == 2)
             {
+                $affected = DB::table('message')
+                    ->where('id', $id)
+                    ->update(['auditStatus' => 2]);
                 return response()->json([
                     'auditStatus' => '2',
                     'message'=>'不通过'
