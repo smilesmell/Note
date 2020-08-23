@@ -93,13 +93,13 @@ class UserController extends Controller
             'message'=>'success'
             ], 201);
     }
-        public function  accept($name,$auditStatus)
+        public function  accept($id,$auditStatus)
         {
 
             if($auditStatus == 0)
             {
                 $affected = DB::table('message')
-                    ->where('name', $name)
+                    ->where('id', $id)
                     ->update(['auditStatus' => 0]);
 
                 return response()->json([
@@ -110,7 +110,7 @@ class UserController extends Controller
             if($auditStatus == 1)
             {
                 $affected = DB::table('message')
-                    ->where('name', $name)
+                    ->where('id', $id)
                     ->update(['auditStatus' => 1]);
                 return response()->json([
                     'auditStatus' => '1',
@@ -120,7 +120,7 @@ class UserController extends Controller
             if($auditStatus == 2)
             {
                 $affected = DB::table('message')
-                    ->where('name', $name)
+                    ->where('id', $id)
                     ->update(['auditStatus' => 2]);
                 return response()->json([
                     'auditStatus' => '2',
@@ -128,13 +128,13 @@ class UserController extends Controller
                 ]);
             }
         }
-        public function look($name)
+        public function look($username)
         {
 
 
             $data = DB::table('message')
-                ->when($name, function ($query, $name) {
-                    return $query->where('name', $name);
+                ->when($username, function ($query, $username) {
+                    return $query->where('username', $username);
                 })
                 ->get();
 //            var_dump(count($data));

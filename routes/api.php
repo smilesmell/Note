@@ -21,9 +21,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('register', 'API\UserController@register');
 Route::post('login', 'API\UserController@login');
-Route::get('accept/{name}/{auditStatus}', 'API\UserController@accept');
+Route::get('accept/{id}/{auditStatus}', 'API\UserController@accept');
 Route::post('submit', 'API\UserController@submit');
-Route::get('look/{name}', 'API\UserController@look');
+Route::get('look/{username}', 'API\UserController@look');
 Route::post('details', 'API\UserController@details');
 //Route::group(['middleware' => 'auth:api'], function(){
 //
