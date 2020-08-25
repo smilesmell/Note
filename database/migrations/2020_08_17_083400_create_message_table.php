@@ -23,6 +23,7 @@ class CreateMessageTable extends Migration
             $table->string('reason')->nullable();
             $table->timestamps();
             $table->integer('auditStatus')->default(0);
+            $table->string('refuse')->nullable();
         });
     }
 

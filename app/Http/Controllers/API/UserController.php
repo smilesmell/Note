@@ -122,6 +122,8 @@ class UserController extends Controller
                 $affected = DB::table('message')
                     ->where('id', $id)
                     ->update(['auditStatus' => 2]);
+
+
                 return response()->json([
                     'auditStatus' => '2',
                     'message'=>'不通过'
@@ -135,6 +137,7 @@ class UserController extends Controller
             $data = DB::table('message')
                 ->when($username, function ($query, $username) {
                     return $query->where('username', $username);
+
                 })
                 ->get();
 //            var_dump(count($data));
@@ -156,6 +159,15 @@ class UserController extends Controller
             }
 
 
+        }
+        public function  refuse($id,$reason)
+        {
+           $data = DB::table('message')
+                ->where('id', $id)
+                ->update(['refuse' => $reason]);
+            return response() -> json([
+                'state' => 'success'
+            ]);
         }
 
 }

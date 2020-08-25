@@ -11,7 +11,7 @@ class Message extends Model
     //
     protected $table = 'message';
     public $timestamps = false;
-    protected $fillable = ['username','name', 'department','type','date','reason','auditStatus'];
+    protected $fillable = ['username','name', 'department','type','date','reason','auditStatus','refuse'];
     public function user()
     {
         return $this->belongsTo(User::class);

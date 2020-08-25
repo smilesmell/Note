@@ -24,6 +24,7 @@ Route::post('login', 'API\UserController@login');
 Route::get('accept/{id}/{auditStatus}', 'API\UserController@accept');
 Route::post('submit', 'API\UserController@submit');
 Route::get('look/{username}', 'API\UserController@look');
+Route::get('refuse/{id}/{reason}', 'API\UserController@refuse');
 Route::post('details', 'API\UserController@details');
 //Route::group(['middleware' => 'auth:api'], function(){
 //
